@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LiD Trainer Privacy Policy</title>
+<style>
+  :root {
+    --bg: #faf9f6;
+    --surface: #ffffff;
+    --surface-alt: #f2efe8;
+    --text: #1a2438;
+    --text-secondary: #5b6478;
+    --border: #e4e1d8;
+    --accent-text: #92660a;
+    --navy: #0e1b34;
+    --code-bg: #f2efe8;
+    --shadow: 0 1px 2px rgba(14, 27, 52, 0.06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1420;
+      --surface: #131c2e;
+      --surface-alt: #182338;
+      --text: #e8e6df;
+      --text-secondary: #a6afc4;
+      --border: #263256;
+      --accent-text: #f4b400;
+      --navy: #f4b400;
+      --code-bg: #182338;
+      --shadow: none;
+    }
+    strong { color: var(--accent-text) !important; }
+    .mark { color: var(--bg) !important; }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page { max-width: 720px; margin: 0 auto; padding: 56px 24px 96px; }
+
+  header.doc-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+  }
+
+  .mark {
+    width: 48px; height: 48px; border-radius: 14px;
+    background: var(--navy); color: var(--bg);
+    display: flex; align-items: center; justify-content: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700; font-size: 20px; flex-shrink: 0;
+    box-shadow: var(--shadow);
+  }
+
+  .doc-head h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px; line-height: 1.2; margin: 0 0 4px;
+    color: var(--navy); text-wrap: balance;
+  }
+
+  .doc-head .meta { color: var(--text-secondary); font-size: 14px; }
+  .lede { font-size: 17px; color: var(--text); margin-bottom: 40px; }
+
+  .toc {
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 44px;
+  }
+  .toc-label {
+    font-size: 12px; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--text-secondary); margin: 0 0 10px;
+  }
+  .toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 24px; }
+  .toc li { break-inside: avoid; margin-bottom: 6px; }
+  .toc a { color: var(--text); text-decoration: none; font-size: 14.5px; }
+  .toc a:hover, .toc a:focus-visible { color: var(--accent-text); text-decoration: underline; }
+
+  section { margin-bottom: 40px; scroll-margin-top: 24px; }
+
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px; color: var(--navy);
+    display: flex; align-items: baseline; gap: 10px; margin: 0 0 14px;
+  }
+  h2 .num {
+    font-variant-numeric: tabular-nums; color: var(--accent-text);
+    font-size: 14px; font-weight: 700;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  h3 { font-size: 15.5px; color: var(--text); margin: 20px 0 8px; }
+
+  p { margin: 0 0 14px; color: var(--text); }
+  p.tight { margin-bottom: 8px; }
+  ul, ol.plain { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  strong { color: var(--navy); }
+  a { color: var(--accent-text); }
+
+  .data-table {
+    width: 100%; border-collapse: collapse; margin: 8px 0 18px;
+    font-size: 14.5px; overflow-x: auto; display: block;
+  }
+  .data-table thead, .data-table tbody { display: table; width: 100%; table-layout: fixed; }
+  .data-table th, .data-table td {
+    text-align: left; padding: 10px 12px;
+    border-bottom: 1px solid var(--border); vertical-align: top;
+  }
+  .data-table th {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em;
+    color: var(--text-secondary); font-weight: 600;
+  }
+
+  .pill {
+    display: inline-block; font-size: 12px; padding: 2px 9px; border-radius: 999px;
+    background: var(--surface-alt); border: 1px solid var(--border);
+    color: var(--text-secondary); white-space: nowrap;
+  }
+
+  .contact-card {
+    background: var(--surface-alt); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px 24px;
+    display: flex; flex-wrap: wrap; gap: 20px 32px;
+  }
+  .contact-item .k {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em;
+    color: var(--text-secondary); margin-bottom: 4px;
+  }
+  .contact-item .v { font-size: 15px; }
+  .contact-item .v a { text-decoration: none; }
+  .contact-item .v a:hover { text-decoration: underline; }
+
+  footer.doc-foot {
+    margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border);
+    color: var(--text-secondary); font-size: 13px;
+  }
+
+  code { background: var(--code-bg); padding: 1px 6px; border-radius: 4px; font-size: 0.92em; }
+
+  @media (max-width: 480px) {
+    .toc ol { columns: 1; }
+    .page { padding: 40px 18px 72px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="doc-head">
+    <div class="mark">LiD</div>
+    <div>
+      <h1>LiD Trainer — Privacy Policy</h1>
+      <div class="meta">Effective date: August 16, 2026</div>
+    </div>
+  </header>
+
+  <p class="lede">
+    LiD Trainer is an offline exam-preparation app for the German "Leben in Deutschland" citizenship
+    test. This policy explains what information the app handles, why, and what choices you have. In
+    short: your exam progress never leaves your device, and the only data sent anywhere is what's
+    needed to show ads and to respond if you contact us.
+  </p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#local">Data stored only on your device</a></li>
+      <li><a href="#ads">Advertising data (Google AdMob)</a></li>
+      <li><a href="#contact-data">Data you choose to send us</a></li>
+      <li><a href="#content-updates">Content updates</a></li>
+      <li><a href="#sharing">How information is shared</a></li>
+      <li><a href="#retention">Retention &amp; deletion</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </nav>
+
+  <section id="overview">
+    <h2><span class="num">01</span>Overview</h2>
+    <p>
+      LiD Trainer does not require an account, login, or registration of any kind. There is no
+      server-side user profile — the app works fully offline once installed, using a question bank
+      bundled with the app and stored in a local database on your device.
+    </p>
+    <p>
+      Two things in the app do involve the internet: showing ads (so the app can be free), and two
+      optional features — reporting a question and the contact form — that send a message to the
+      developer if and only if you choose to use them.
+    </p>
+  </section>
+
+  <section id="local">
+    <h2><span class="num">02</span>Data stored only on your device</h2>
+    <p>The following stays on your device, in the app's local storage, and is never transmitted to us or anyone else:</p>
+    <ul>
+      <li>Your exam and practice history, scores, and pass/fail results</li>
+      <li>Questions you've starred as favorites</li>
+      <li>Your selected federal state (Bundesland), display language, and light/dark theme preference</li>
+    </ul>
+    <p>Uninstalling the app permanently deletes all of this data, since it is never backed up to any server.</p>
+  </section>
+
+  <section id="ads">
+    <h2><span class="num">03</span>Advertising data <span class="pill">Google AdMob</span></h2>
+    <p>
+      LiD Trainer shows banner and occasional interstitial ads through Google's AdMob (Google Mobile
+      Ads SDK), which is how the app stays free. AdMob and its partners may collect information such
+      as your advertising identifier, general device information, and approximate location, in order
+      to serve and measure ads.
+    </p>
+    <p>
+      If you're in the European Economic Area or the UK, you'll be shown a consent screen (via
+      Google's User Messaging Platform) before any personalized ad data collection, and you can
+      change your choice at any time from your device's ad settings.
+    </p>
+    <p>
+      This processing is governed by Google's own policies, not LiD Trainer's:
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.google.com/about/company/user-consent-policy/" target="_blank" rel="noopener">Google Ads Consent</a>
+    </p>
+  </section>
+
+  <section id="contact-data">
+    <h2><span class="num">04</span>Data you choose to send us</h2>
+    <p>Two in-app features send information to the developer's inbox — only when you actively use them:</p>
+
+    <h3>Report a Question</h3>
+    <p class="tight">When you tap the flag icon on an exam question to report an error, the app sends:</p>
+    <ul>
+      <li>The question's ID, source number, category, and language</li>
+      <li>The question text and all four answer options</li>
+      <li>Any note you optionally type describing the problem</li>
+    </ul>
+
+    <h3>Contact Form</h3>
+    <p class="tight">When you submit the contact form in Settings, the app sends:</p>
+    <ul>
+      <li>The name and email address you enter (name is optional)</li>
+      <li>The subject and message you write</li>
+    </ul>
+
+    <p>Neither feature collects anything automatically beyond what's listed above — no location, no device identifiers, no browsing history.</p>
+  </section>
+
+  <section id="content-updates">
+    <h2><span class="num">05</span>Content updates</h2>
+    <p>
+      On launch, the app checks a public file on GitHub to see if a newer version of the question
+      bank is available, and downloads it if so. This request doesn't include or transmit any
+      personal information — it's the same request for every installation.
+    </p>
+  </section>
+
+  <section id="sharing">
+    <h2><span class="num">06</span>How information is shared</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Recipient</th><th>What they get</th><th>Why</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google AdMob</td>
+          <td>Advertising identifiers &amp; device info</td>
+          <td>Serving and measuring ads</td>
+        </tr>
+        <tr>
+          <td>EmailJS (email delivery service)</td>
+          <td>Whatever you submit via Report a Question or the Contact form</td>
+          <td>Delivering your message to the developer's inbox</td>
+        </tr>
+        <tr>
+          <td>GitHub</td>
+          <td>Nothing personal — just a standard file request</td>
+          <td>Checking for question-bank updates</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>We do not sell your information, and we do not share it with anyone beyond the service providers above, who process it solely to provide the functionality described.</p>
+  </section>
+
+  <section id="retention">
+    <h2><span class="num">07</span>Retention &amp; deletion</h2>
+    <p>
+      Local data (history, favorites, settings) is deleted the moment you uninstall the app. Messages
+      sent via the report or contact features are retained in the developer's email inbox only as
+      long as needed to address them; email us (below) to request deletion of a message you've sent.
+    </p>
+  </section>
+
+  <section id="children">
+    <h2><span class="num">08</span>Children's privacy</h2>
+    <p>
+      LiD Trainer is intended for people preparing for the German citizenship exam and is not
+      directed at children under 13. We do not knowingly collect personal information from children
+      under 13.
+    </p>
+  </section>
+
+  <section id="rights">
+    <h2><span class="num">09</span>Your rights</h2>
+    <p>
+      If you're in the EU/EEA, UK, or another jurisdiction with data protection rights, you may
+      request access to, correction of, or deletion of any information you've sent us via the report
+      or contact features, and you may withdraw ad-personalization consent at any time from your
+      device settings. Contact us using the details below to exercise any of these rights.
+    </p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">10</span>Changes to this policy</h2>
+    <p>
+      If this policy changes, the updated version will be posted at this same page with a new
+      effective date above. Continued use of the app after a change means you accept the update.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">11</span>Contact us</h2>
+    <p>Questions about this policy or your data? Reach out directly:</p>
+    <div class="contact-card">
+      <div class="contact-item">
+        <div class="k">Email</div>
+        <div class="v"><a href="mailto:lidtrainer2026@gmail.com">lidtrainer2026@gmail.com</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="k">Telegram</div>
+        <div class="v"><a href="https://t.me/+380500776654" target="_blank" rel="noopener">+380 50 077 66 54</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="k">In-app</div>
+        <div class="v">Settings → Contact</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="doc-foot">
+    LiD Trainer is an independent exam-preparation tool and is not affiliated with the German
+    Federal Office for Migration and Refugees (BAMF) or any government agency.
+  </footer>
+
+</div>
+</body>
+</html>
